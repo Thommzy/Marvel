@@ -7,14 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7530DCA5186A1BE3E19CCB5D /* Pods_WallapopMarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */; };
 		E1DACD742838D66A0046C281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD732838D66A0046C281 /* AppDelegate.swift */; };
 		E1DACD762838D66A0046C281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD752838D66A0046C281 /* SceneDelegate.swift */; };
 		E1DACD7D2838D66F0046C281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DACD7C2838D66F0046C281 /* Assets.xcassets */; };
 		E1DACD802838D66F0046C281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DACD7E2838D66F0046C281 /* LaunchScreen.storyboard */; };
 		E1DACD8A2838DA0D0046C281 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD892838DA0D0046C281 /* HomeVC.swift */; };
+		E1DACD8E2838E9370046C281 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD8D2838E9370046C281 /* AppCoordinator.swift */; };
+		E1DACD922838E9A40046C281 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD912838E9A40046C281 /* Router.swift */; };
+		E1DACD942838E9FF0046C281 /* WindowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD932838E9FF0046C281 /* WindowRouter.swift */; };
+		E1DACD972838EA300046C281 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD962838EA300046C281 /* Coordinator.swift */; };
+		E1DACD992838EA4E0046C281 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD982838EA4E0046C281 /* Presentable.swift */; };
+		E1DACD9B2838EA650046C281 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD9A2838EA650046C281 /* WindowCoordinator.swift */; };
+		E1DACD9E2838EAC00046C281 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD9D2838EAC00046C281 /* BaseNavigationController.swift */; };
+		E1DACDA12838F0920046C281 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDA02838F0920046C281 /* HomeCoordinator.swift */; };
+		E1DACDA52838F4590046C281 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDA42838F4590046C281 /* DetailVC.swift */; };
+		E1DACDA82838F6730046C281 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDA72838F6730046C281 /* AppDependencyContainer.swift */; };
+		E1DACDAA2838F9930046C281 /* HomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDA92838F9930046C281 /* HomeDIContainer.swift */; };
+		E1DACDAD28390AA50046C281 /* OsLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDAC28390AA50046C281 /* OsLogs.swift */; };
+		E1DACDAF28390B6B0046C281 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDAE28390B6B0046C281 /* NetworkLogger.swift */; };
+		E1DACDB628390DE90046C281 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDB528390DE90046C281 /* ParameterEncoding.swift */; };
+		E1DACDB828390E170046C281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDB728390E170046C281 /* NetworkError.swift */; };
+		E1DACDBA28390E390046C281 /* RemoteAPIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDB928390E390046C281 /* RemoteAPIResponseHandler.swift */; };
+		E1DACDBC28390E720046C281 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDBB28390E720046C281 /* JSONParameterEncoder.swift */; };
+		E1DACDBE28390F4D0046C281 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDBD28390F4D0046C281 /* URLParameterEncoder.swift */; };
+		E1DACDC028390F890046C281 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDBF28390F890046C281 /* APIRouter.swift */; };
+		E1DACDC228390FA40046C281 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDC128390FA40046C281 /* EndPointType.swift */; };
+		E1DACDC428390FC60046C281 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDC328390FC60046C281 /* HTTPMethod.swift */; };
+		E1DACDC628390FDC0046C281 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDC528390FDC0046C281 /* HTTPTask.swift */; };
+		E1DACDC828390FFD0046C281 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDC728390FFD0046C281 /* NetworkRouter.swift */; };
+		E1DACDCB283910E10046C281 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDCA283910E10046C281 /* HomeRepository.swift */; };
+		E1DACDCF283911AD0046C281 /* HomeAPIResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDCE283911AD0046C281 /* HomeAPIResponseHandler.swift */; };
+		E1DACDD1283911E70046C281 /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDD0283911E70046C281 /* HomeEndpoint.swift */; };
+		E1DACDD32839126B0046C281 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDD22839126B0046C281 /* Constant.swift */; };
+		E1DACDD5283916BD0046C281 /* MarvelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDD4283916BD0046C281 /* MarvelCharacter.swift */; };
+		E1DACDD9283920120046C281 /* HomeRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDD8283920120046C281 /* HomeRemoteAPI.swift */; };
+		E1DACDDB2839256A0046C281 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDDA2839256A0046C281 /* HomeViewModel.swift */; };
+		E1DACDDD283926460046C281 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDDC283926460046C281 /* BaseVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.release.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.release.xcconfig"; sourceTree = "<group>"; };
+		69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallapopMarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51C68B895488F38EFABF0BE /* Pods-WallapopMarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.debug.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.debug.xcconfig"; sourceTree = "<group>"; };
 		E1DACD702838D66A0046C281 /* WallapopMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallapopMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DACD732838D66A0046C281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1DACD752838D66A0046C281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +57,37 @@
 		E1DACD7F2838D66F0046C281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1DACD812838D6700046C281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DACD892838DA0D0046C281 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E1DACD8D2838E9370046C281 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E1DACD912838E9A40046C281 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E1DACD932838E9FF0046C281 /* WindowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowRouter.swift; sourceTree = "<group>"; };
+		E1DACD962838EA300046C281 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E1DACD982838EA4E0046C281 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		E1DACD9A2838EA650046C281 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
+		E1DACD9D2838EAC00046C281 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		E1DACDA02838F0920046C281 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		E1DACDA42838F4590046C281 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		E1DACDA72838F6730046C281 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		E1DACDA92838F9930046C281 /* HomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDIContainer.swift; sourceTree = "<group>"; };
+		E1DACDAC28390AA50046C281 /* OsLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsLogs.swift; sourceTree = "<group>"; };
+		E1DACDAE28390B6B0046C281 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		E1DACDB528390DE90046C281 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E1DACDB728390E170046C281 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E1DACDB928390E390046C281 /* RemoteAPIResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAPIResponseHandler.swift; sourceTree = "<group>"; };
+		E1DACDBB28390E720046C281 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		E1DACDBD28390F4D0046C281 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		E1DACDBF28390F890046C281 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		E1DACDC128390FA40046C281 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		E1DACDC328390FC60046C281 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E1DACDC528390FDC0046C281 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E1DACDC728390FFD0046C281 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		E1DACDCA283910E10046C281 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		E1DACDCE283911AD0046C281 /* HomeAPIResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIResponseHandler.swift; sourceTree = "<group>"; };
+		E1DACDD0283911E70046C281 /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
+		E1DACDD22839126B0046C281 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E1DACDD4283916BD0046C281 /* MarvelCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
+		E1DACDD8283920120046C281 /* HomeRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteAPI.swift; sourceTree = "<group>"; };
+		E1DACDDA2839256A0046C281 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E1DACDDC283926460046C281 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +95,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7530DCA5186A1BE3E19CCB5D /* Pods_WallapopMarvel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D56B68D18B6810E8F0CE700D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1DACD672838D66A0046C281 = {
 			isa = PBXGroup;
 			children = (
 				E1DACD722838D66A0046C281 /* WallapopMarvel */,
 				E1DACD712838D66A0046C281 /* Products */,
+				F4099DCDFB2BA1E94CCAA2DA /* Pods */,
+				D56B68D18B6810E8F0CE700D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,10 +131,15 @@
 		E1DACD722838D66A0046C281 /* WallapopMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				E1DACDA62838F57B0046C281 /* DI */,
+				E1DACD9C2838EAA30046C281 /* Utils */,
+				E1DACD8F2838E97A0046C281 /* Services */,
+				E1DACDB028390D180046C281 /* Repositories */,
 				E1DACD8B2838DA830046C281 /* Model */,
 				E1DACD872838D9C70046C281 /* Scenes */,
 				E1DACD732838D66A0046C281 /* AppDelegate.swift */,
 				E1DACD752838D66A0046C281 /* SceneDelegate.swift */,
+				E1DACD8D2838E9370046C281 /* AppCoordinator.swift */,
 				E1DACD7C2838D66F0046C281 /* Assets.xcassets */,
 				E1DACD7E2838D66F0046C281 /* LaunchScreen.storyboard */,
 				E1DACD812838D6700046C281 /* Info.plist */,
@@ -69,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DACD882838D9F70046C281 /* Home */,
+				E1DACDA32838F4340046C281 /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -76,7 +159,8 @@
 		E1DACD882838D9F70046C281 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E1DACD892838DA0D0046C281 /* HomeVC.swift */,
+				E1DACDA22838F09A0046C281 /* HomeVC */,
+				E1DACDA02838F0920046C281 /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -84,8 +168,169 @@
 		E1DACD8B2838DA830046C281 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1DACDD22839126B0046C281 /* Constant.swift */,
+				E1DACDD4283916BD0046C281 /* MarvelCharacter.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E1DACD8F2838E97A0046C281 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDB128390D5A0046C281 /* Network */,
+				E1DACD952838EA200046C281 /* Coordinator */,
+				E1DACDAB28390A320046C281 /* Logging */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E1DACD902838E9860046C281 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACD912838E9A40046C281 /* Router.swift */,
+				E1DACD932838E9FF0046C281 /* WindowRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1DACD952838EA200046C281 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACD902838E9860046C281 /* Router */,
+				E1DACD962838EA300046C281 /* Coordinator.swift */,
+				E1DACD982838EA4E0046C281 /* Presentable.swift */,
+				E1DACD9A2838EA650046C281 /* WindowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E1DACD9C2838EAA30046C281 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACD9D2838EAC00046C281 /* BaseNavigationController.swift */,
+				E1DACDDC283926460046C281 /* BaseVM.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E1DACDA22838F09A0046C281 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACD892838DA0D0046C281 /* HomeVC.swift */,
+				E1DACDDA2839256A0046C281 /* HomeViewModel.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		E1DACDA32838F4340046C281 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDA42838F4590046C281 /* DetailVC.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E1DACDA62838F57B0046C281 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDA72838F6730046C281 /* AppDependencyContainer.swift */,
+				E1DACDA92838F9930046C281 /* HomeDIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		E1DACDAB28390A320046C281 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDAC28390AA50046C281 /* OsLogs.swift */,
+				E1DACDAE28390B6B0046C281 /* NetworkLogger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		E1DACDB028390D180046C281 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDCC2839110F0046C281 /* Remote */,
+				E1DACDC9283910CE0046C281 /* Home */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E1DACDB128390D5A0046C281 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDB328390DB20046C281 /* Encoding */,
+				E1DACDB228390D900046C281 /* Endpoint */,
+				E1DACDB428390DC00046C281 /* Service */,
+				E1DACDB728390E170046C281 /* NetworkError.swift */,
+				E1DACDB928390E390046C281 /* RemoteAPIResponseHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E1DACDB228390D900046C281 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDCD283911860046C281 /* Home */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		E1DACDB328390DB20046C281 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDB528390DE90046C281 /* ParameterEncoding.swift */,
+				E1DACDBB28390E720046C281 /* JSONParameterEncoder.swift */,
+				E1DACDBD28390F4D0046C281 /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		E1DACDB428390DC00046C281 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDBF28390F890046C281 /* APIRouter.swift */,
+				E1DACDC128390FA40046C281 /* EndPointType.swift */,
+				E1DACDC328390FC60046C281 /* HTTPMethod.swift */,
+				E1DACDC528390FDC0046C281 /* HTTPTask.swift */,
+				E1DACDC728390FFD0046C281 /* NetworkRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E1DACDC9283910CE0046C281 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDCA283910E10046C281 /* HomeRepository.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E1DACDCC2839110F0046C281 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDD8283920120046C281 /* HomeRemoteAPI.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		E1DACDCD283911860046C281 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E1DACDD0283911E70046C281 /* HomeEndpoint.swift */,
+				E1DACDCE283911AD0046C281 /* HomeAPIResponseHandler.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4099DCDFB2BA1E94CCAA2DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B51C68B895488F38EFABF0BE /* Pods-WallapopMarvel.debug.xcconfig */,
+				49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,10 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1DACD842838D6700046C281 /* Build configuration list for PBXNativeTarget "WallapopMarvel" */;
 			buildPhases = (
+				D5BA94BFE24274596ED8D3E6 /* [CP] Check Pods Manifest.lock */,
 				E1DACD8C2838E1F30046C281 /* Run SwiftLint */,
 				E1DACD6C2838D66A0046C281 /* Sources */,
 				E1DACD6D2838D66A0046C281 /* Frameworks */,
 				E1DACD6E2838D66A0046C281 /* Resources */,
+				536CFECC7B165B0E9BAF7876 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +402,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		536CFECC7B165B0E9BAF7876 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5BA94BFE24274596ED8D3E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WallapopMarvel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E1DACD8C2838E1F30046C281 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,9 +466,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DACDBC28390E720046C281 /* JSONParameterEncoder.swift in Sources */,
+				E1DACDDD283926460046C281 /* BaseVM.swift in Sources */,
+				E1DACDDB2839256A0046C281 /* HomeViewModel.swift in Sources */,
+				E1DACDD5283916BD0046C281 /* MarvelCharacter.swift in Sources */,
+				E1DACDAD28390AA50046C281 /* OsLogs.swift in Sources */,
+				E1DACD8E2838E9370046C281 /* AppCoordinator.swift in Sources */,
+				E1DACD992838EA4E0046C281 /* Presentable.swift in Sources */,
 				E1DACD8A2838DA0D0046C281 /* HomeVC.swift in Sources */,
+				E1DACDA82838F6730046C281 /* AppDependencyContainer.swift in Sources */,
+				E1DACD922838E9A40046C281 /* Router.swift in Sources */,
+				E1DACDCB283910E10046C281 /* HomeRepository.swift in Sources */,
+				E1DACDC028390F890046C281 /* APIRouter.swift in Sources */,
 				E1DACD742838D66A0046C281 /* AppDelegate.swift in Sources */,
+				E1DACDB628390DE90046C281 /* ParameterEncoding.swift in Sources */,
+				E1DACDA52838F4590046C281 /* DetailVC.swift in Sources */,
+				E1DACDAF28390B6B0046C281 /* NetworkLogger.swift in Sources */,
+				E1DACDBE28390F4D0046C281 /* URLParameterEncoder.swift in Sources */,
+				E1DACDBA28390E390046C281 /* RemoteAPIResponseHandler.swift in Sources */,
+				E1DACD9B2838EA650046C281 /* WindowCoordinator.swift in Sources */,
+				E1DACD942838E9FF0046C281 /* WindowRouter.swift in Sources */,
+				E1DACDD32839126B0046C281 /* Constant.swift in Sources */,
+				E1DACDC628390FDC0046C281 /* HTTPTask.swift in Sources */,
 				E1DACD762838D66A0046C281 /* SceneDelegate.swift in Sources */,
+				E1DACD9E2838EAC00046C281 /* BaseNavigationController.swift in Sources */,
+				E1DACDAA2838F9930046C281 /* HomeDIContainer.swift in Sources */,
+				E1DACDB828390E170046C281 /* NetworkError.swift in Sources */,
+				E1DACDC828390FFD0046C281 /* NetworkRouter.swift in Sources */,
+				E1DACDCF283911AD0046C281 /* HomeAPIResponseHandler.swift in Sources */,
+				E1DACDD1283911E70046C281 /* HomeEndpoint.swift in Sources */,
+				E1DACDC428390FC60046C281 /* HTTPMethod.swift in Sources */,
+				E1DACD972838EA300046C281 /* Coordinator.swift in Sources */,
+				E1DACDD9283920120046C281 /* HomeRemoteAPI.swift in Sources */,
+				E1DACDC228390FA40046C281 /* EndPointType.swift in Sources */,
+				E1DACDA12838F0920046C281 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +635,7 @@
 		};
 		E1DACD852838D6700046C281 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51C68B895488F38EFABF0BE /* Pods-WallapopMarvel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -345,6 +663,7 @@
 		};
 		E1DACD862838D6700046C281 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

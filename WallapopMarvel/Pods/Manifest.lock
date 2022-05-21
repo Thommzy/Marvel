@@ -1,0 +1,20 @@
+PODS:
+  - CombineExt (1.5.1)
+  - Swinject (2.8.1)
+
+DEPENDENCIES:
+  - CombineExt
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - CombineExt
+    - Swinject
+
+SPEC CHECKSUMS:
+  CombineExt: e081b93f38f507660550e001531a049a6825f63e
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
+
+PODFILE CHECKSUM: 828c16f8288239c4aeb09627ebc4f00fcf0343c9
+
+COCOAPODS: 1.11.3
