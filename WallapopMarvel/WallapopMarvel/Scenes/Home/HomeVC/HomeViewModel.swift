@@ -14,6 +14,9 @@ protocol HomeViewModelling: BaseViewModelling {
     var apiKey: CurrentValueSubject<String?, Never> { get }
     var hash: CurrentValueSubject<String, Never> { get }
     var viewDidAppear: PassthroughSubject<Void, Never> { get }
+    var numberOfRows: Int { get }
+    func displayModelForCell(at indexPath: IndexPath) -> MarvelCharacterDataResult
+    var dataSouceUpdated: PassthroughSubject<Void, Never> { get }
 }
 
 class HomeViewModel: BaseViewModel, HomeViewModelling {
@@ -21,16 +24,25 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
     var apiKey = CurrentValueSubject<String?, Never>(nil)
     var hash = CurrentValueSubject<String, Never>("")
     var viewDidAppear = PassthroughSubject<Void, Never>()
+    var dataSouceUpdated = PassthroughSubject<Void, Never>()
 
     // MARK: - Properties
     private let homeRepository: HomeRepository
-
+    private var dataSource = [MarvelCharacterDataResult]() {
+        didSet { dataSouceUpdated.send() }
+    }
+    var numberOfRows: Int { dataSource.count }
+    
     // MARK: - Methods
 
     init(homeRepository: HomeRepository) {
         self.homeRepository = homeRepository
         super.init()
         bindOutput()
+    }
+    
+    func displayModelForCell(at indexPath: IndexPath) -> MarvelCharacterDataResult {
+        return dataSource[indexPath.row]
     }
 
     private func bindOutput() {
@@ -43,8 +55,10 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
         getMarvelList()
             .sink { networkError in
                 print(networkError)
-            } receiveValue: { res in
+            } receiveValue: { [unowned self] res in
                 print(res.data?.results.count, "mama-->>")
+                guard let results = res.data?.results else { return  }
+                dataSource = results
                 self.successResponse.send(res)
             }
             .store(in: &subscriptions)
@@ -61,7 +75,8 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
         .flatMap { output in
             return homeRepository.marvelList(with: output.0,
                                              apiKey: output.1,
-                                             hash: output.2)
+                                             hash: output.2,
+                                             limit: 50)
         }
         .eraseToAnyPublisher()
     }

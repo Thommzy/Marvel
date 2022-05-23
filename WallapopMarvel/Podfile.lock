@@ -1,20 +1,28 @@
 PODS:
   - CombineExt (1.5.1)
+  - Kingfisher (7.2.0)
+  - SnapKit (5.0.1)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
   - CombineExt
+  - Kingfisher
+  - SnapKit
   - Swinject
 
 SPEC REPOS:
   trunk:
     - CombineExt
+    - Kingfisher
+    - SnapKit
     - Swinject
 
 SPEC CHECKSUMS:
   CombineExt: e081b93f38f507660550e001531a049a6825f63e
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 828c16f8288239c4aeb09627ebc4f00fcf0343c9
+PODFILE CHECKSUM: b5e288a0938cbdb7145c75901ad945ec784c1a63
 
 COCOAPODS: 1.11.3

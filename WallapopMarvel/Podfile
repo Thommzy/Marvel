@@ -9,5 +9,7 @@ target 'WallapopMarvel' do
 
   pod 'Swinject'
   pod 'CombineExt'
+  pod 'SnapKit'
+  pod 'Kingfisher'
 
 end

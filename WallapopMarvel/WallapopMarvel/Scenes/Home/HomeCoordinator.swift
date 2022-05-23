@@ -18,11 +18,20 @@ class HomeCoordinator: Coordinator<DeepLink> {
         homeVC.navigationItem.hidesBackButton = true
         return homeVC
     }()
+    lazy var detailVC: DetailVC = {
+        let detailVC = self.detailVCFactory()
+//        detailVC.homeCoordinateDelegate = self
+        detailVC.navigationItem.hidesBackButton = false
+        return detailVC
+    }()
     weak var delegate: HomeCoordinatorDelegate?
     private let homeVCFactory: () -> HomeVC
+    private let detailVCFactory: () -> DetailVC
     init(router: RouterType,
-         homeVCFactory: @escaping () -> HomeVC) {
+         homeVCFactory: @escaping () -> HomeVC,
+         detailVCFactory: @escaping () -> DetailVC) {
         self.homeVCFactory = homeVCFactory
+        self.detailVCFactory = detailVCFactory
         super.init(router: router)
     }
     override func start(with link: DeepLink?) {
@@ -40,5 +49,13 @@ class HomeCoordinator: Coordinator<DeepLink> {
 }
 
 extension HomeCoordinator: HomeVCDelegate {
-    func didMoveTodetail() {}
+    func didMoveTodetail() {
+        moveToDetailVC()
+    }
+}
+
+extension HomeCoordinator {
+    func moveToDetailVC() {
+        router.push(detailVC, animated: true, completion: nil)
+    }
 }

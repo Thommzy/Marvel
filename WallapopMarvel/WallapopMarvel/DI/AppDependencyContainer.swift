@@ -24,7 +24,8 @@ class AppDependencyContainer {
             container.register(HomeCoordinator.self) { (_, router: RouterType) -> HomeCoordinator in
                 let homeDIContainer: HomeDIContainer = HomeDIContainer(parentContainer: container)
                 return HomeCoordinator(router: router,
-                                       homeVCFactory: homeDIContainer.makeHomeCoordinator)
+                                       homeVCFactory: homeDIContainer.makeHomeCoordinator,
+                                       detailVCFactory: homeDIContainer.makeDetailVC)
             }
             // MARK: AppCoordinator
             container.register(AppCoordinator.self) { resolver in

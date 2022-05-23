@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7530DCA5186A1BE3E19CCB5D /* Pods_WallapopMarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */; };
+		E19B1399283C08A000E52073 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B1398283C08A000E52073 /* With.swift */; };
+		E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */; };
+		E19B139E283C114B00E52073 /* UITableViewCell+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */; };
 		E1DACD742838D66A0046C281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD732838D66A0046C281 /* AppDelegate.swift */; };
 		E1DACD762838D66A0046C281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD752838D66A0046C281 /* SceneDelegate.swift */; };
 		E1DACD7D2838D66F0046C281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DACD7C2838D66F0046C281 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.release.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.release.xcconfig"; sourceTree = "<group>"; };
 		69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallapopMarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51C68B895488F38EFABF0BE /* Pods-WallapopMarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.debug.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.debug.xcconfig"; sourceTree = "<group>"; };
+		E19B1398283C08A000E52073 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTableViewCell.swift; sourceTree = "<group>"; };
+		E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extended.swift"; sourceTree = "<group>"; };
 		E1DACD702838D66A0046C281 /* WallapopMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallapopMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DACD732838D66A0046C281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1DACD752838D66A0046C281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E19B1397283C084600E52073 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E19B1398283C08A000E52073 /* With.swift */,
+				E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E19B139A283C0FA200E52073 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E1DACD672838D66A0046C281 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +154,7 @@
 		E1DACD722838D66A0046C281 /* WallapopMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				E19B1397283C084600E52073 /* Extension */,
 				E1DACDA62838F57B0046C281 /* DI */,
 				E1DACD9C2838EAA30046C281 /* Utils */,
 				E1DACD8F2838E97A0046C281 /* Services */,
@@ -159,6 +183,7 @@
 		E1DACD882838D9F70046C281 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E19B139A283C0FA200E52073 /* View */,
 				E1DACDA22838F09A0046C281 /* HomeVC */,
 				E1DACDA02838F0920046C281 /* HomeCoordinator.swift */,
 			);
@@ -472,10 +497,12 @@
 				E1DACDD5283916BD0046C281 /* MarvelCharacter.swift in Sources */,
 				E1DACDAD28390AA50046C281 /* OsLogs.swift in Sources */,
 				E1DACD8E2838E9370046C281 /* AppCoordinator.swift in Sources */,
+				E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */,
 				E1DACD992838EA4E0046C281 /* Presentable.swift in Sources */,
 				E1DACD8A2838DA0D0046C281 /* HomeVC.swift in Sources */,
 				E1DACDA82838F6730046C281 /* AppDependencyContainer.swift in Sources */,
 				E1DACD922838E9A40046C281 /* Router.swift in Sources */,
+				E19B1399283C08A000E52073 /* With.swift in Sources */,
 				E1DACDCB283910E10046C281 /* HomeRepository.swift in Sources */,
 				E1DACDC028390F890046C281 /* APIRouter.swift in Sources */,
 				E1DACD742838D66A0046C281 /* AppDelegate.swift in Sources */,
@@ -487,6 +514,7 @@
 				E1DACD9B2838EA650046C281 /* WindowCoordinator.swift in Sources */,
 				E1DACD942838E9FF0046C281 /* WindowRouter.swift in Sources */,
 				E1DACDD32839126B0046C281 /* Constant.swift in Sources */,
+				E19B139E283C114B00E52073 /* UITableViewCell+Extended.swift in Sources */,
 				E1DACDC628390FDC0046C281 /* HTTPTask.swift in Sources */,
 				E1DACD762838D66A0046C281 /* SceneDelegate.swift in Sources */,
 				E1DACD9E2838EAC00046C281 /* BaseNavigationController.swift in Sources */,

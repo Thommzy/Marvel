@@ -28,7 +28,14 @@ class HomeDIContainer {
             container.register(HomeViewModelling.self) { resolver in
                 return HomeViewModel(homeRepository: resolver.resolve(HomeRepository.self)!)
             }
+            
+            container.register(DetailVC.self) { resolver in
+                let detailVC = DetailVC()
+//                homeVC.viewModel = resolver.resolve(HomeViewModelling.self)!
+                return detailVC
+            }
         }
     }
     func makeHomeCoordinator() -> HomeVC { container.resolve(HomeVC.self)! }
+    func makeDetailVC() -> DetailVC { container.resolve(DetailVC.self)! }
 }
