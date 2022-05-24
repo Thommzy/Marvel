@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinatorDelegate: AnyObject {
-    func didAuthorize()
+    func didStartApp()
 }
 
 class HomeCoordinator: Coordinator<DeepLink> {
@@ -20,7 +20,6 @@ class HomeCoordinator: Coordinator<DeepLink> {
     }()
     lazy var detailVC: DetailVC = {
         let detailVC = self.detailVCFactory()
-//        detailVC.homeCoordinateDelegate = self
         detailVC.navigationItem.hidesBackButton = false
         return detailVC
     }()
@@ -49,13 +48,14 @@ class HomeCoordinator: Coordinator<DeepLink> {
 }
 
 extension HomeCoordinator: HomeVCDelegate {
-    func didMoveTodetail() {
-        moveToDetailVC()
+    func didMoveTodetail(model: MarvelCharacterDataResult) {
+        moveToDetailVC(model: model)
     }
 }
 
 extension HomeCoordinator {
-    func moveToDetailVC() {
+    func moveToDetailVC(model: MarvelCharacterDataResult) {
+        detailVC.setup(with: model)
         router.push(detailVC, animated: true, completion: nil)
     }
 }

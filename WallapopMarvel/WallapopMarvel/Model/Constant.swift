@@ -12,11 +12,12 @@ enum Config {
     static let hash = "78e72675f178d55e3911ed7c730851f7"
     static let timeStamp = 1653117571321
 }
-
 enum Versions {
     static let one = "/v1"
 }
-
 enum Path {
     static let character = "/public/characters"
+}
+enum HomeView {
+    static let title = "Marvel"
 }

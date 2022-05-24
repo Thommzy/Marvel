@@ -9,7 +9,10 @@ import Combine
 import Foundation
 
 protocol HomeRepository {
-    func marvelList(with timeStamp: Int, apiKey: String, hash: String, limit: Int) -> AnyPublisher<MarvelCharacter, NetworkError>
+    func marvelList(with timeStamp: Int,
+                    apiKey: String,
+                    hash: String,
+                    limit: Int) -> AnyPublisher<MarvelCharacter, NetworkError>
 }
 
 class HomeRepo: HomeRepository {
@@ -20,7 +23,10 @@ class HomeRepo: HomeRepository {
     init(homeAPI: HomeRemoteAPI) {
         self.homeAPI = homeAPI
     }
-    func marvelList(with timeStamp: Int, apiKey: String, hash: String, limit: Int) -> AnyPublisher<MarvelCharacter, NetworkError> {
+    func marvelList(with timeStamp: Int,
+                    apiKey: String,
+                    hash: String,
+                    limit: Int) -> AnyPublisher<MarvelCharacter, NetworkError> {
         let homeAPI = homeAPI
         return homeAPI
             .getMarvelList(with: ["ts": timeStamp,

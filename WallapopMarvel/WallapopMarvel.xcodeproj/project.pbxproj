@@ -11,6 +11,8 @@
 		E19B1399283C08A000E52073 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B1398283C08A000E52073 /* With.swift */; };
 		E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */; };
 		E19B139E283C114B00E52073 /* UITableViewCell+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */; };
+		E19B13A3283CA6D800E52073 /* UIControlCombine+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B13A2283CA6D700E52073 /* UIControlCombine+Extended.swift */; };
+		E19B13A5283CDA9900E52073 /* UIImageView+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B13A4283CDA9900E52073 /* UIImageView+Extended.swift */; };
 		E1DACD742838D66A0046C281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD732838D66A0046C281 /* AppDelegate.swift */; };
 		E1DACD762838D66A0046C281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACD752838D66A0046C281 /* SceneDelegate.swift */; };
 		E1DACD7D2838D66F0046C281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DACD7C2838D66F0046C281 /* Assets.xcassets */; };
@@ -47,7 +49,27 @@
 		E1DACDD9283920120046C281 /* HomeRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDD8283920120046C281 /* HomeRemoteAPI.swift */; };
 		E1DACDDB2839256A0046C281 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDDA2839256A0046C281 /* HomeViewModel.swift */; };
 		E1DACDDD283926460046C281 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DACDDC283926460046C281 /* BaseVM.swift */; };
+		E1F0D06B283D0CEB00E9AC96 /* WallapopMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0D06A283D0CEB00E9AC96 /* WallapopMarvelUITests.swift */; };
+		E1F0D06D283D0CEB00E9AC96 /* WallapopMarvelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0D06C283D0CEB00E9AC96 /* WallapopMarvelUITestsLaunchTests.swift */; };
+		E1F0D085283D0E6100E9AC96 /* HomeVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0D084283D0E6100E9AC96 /* HomeVCTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1F0D06E283D0CEC00E9AC96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DACD682838D66A0046C281 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DACD6F2838D66A0046C281;
+			remoteInfo = WallapopMarvel;
+		};
+		E1F0D07B283D0D1A00E9AC96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DACD682838D66A0046C281 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DACD6F2838D66A0046C281;
+			remoteInfo = WallapopMarvel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.release.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +78,8 @@
 		E19B1398283C08A000E52073 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTableViewCell.swift; sourceTree = "<group>"; };
 		E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extended.swift"; sourceTree = "<group>"; };
+		E19B13A2283CA6D700E52073 /* UIControlCombine+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControlCombine+Extended.swift"; sourceTree = "<group>"; };
+		E19B13A4283CDA9900E52073 /* UIImageView+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extended.swift"; sourceTree = "<group>"; };
 		E1DACD702838D66A0046C281 /* WallapopMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallapopMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DACD732838D66A0046C281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1DACD752838D66A0046C281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +118,11 @@
 		E1DACDD8283920120046C281 /* HomeRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteAPI.swift; sourceTree = "<group>"; };
 		E1DACDDA2839256A0046C281 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E1DACDDC283926460046C281 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		E1F0D068283D0CEB00E9AC96 /* WallapopMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallapopMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F0D06A283D0CEB00E9AC96 /* WallapopMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallapopMarvelUITests.swift; sourceTree = "<group>"; };
+		E1F0D06C283D0CEB00E9AC96 /* WallapopMarvelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallapopMarvelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1F0D077283D0D1A00E9AC96 /* WallapopMarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallapopMarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F0D084283D0E6100E9AC96 /* HomeVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +131,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7530DCA5186A1BE3E19CCB5D /* Pods_WallapopMarvel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0D065283D0CEB00E9AC96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0D074283D0D1A00E9AC96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +164,8 @@
 			children = (
 				E19B1398283C08A000E52073 /* With.swift */,
 				E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */,
+				E19B13A2283CA6D700E52073 /* UIControlCombine+Extended.swift */,
+				E19B13A4283CDA9900E52073 /* UIImageView+Extended.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -137,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				E1DACD722838D66A0046C281 /* WallapopMarvel */,
+				E1F0D069283D0CEB00E9AC96 /* WallapopMarvelUITests */,
+				E1F0D078283D0D1A00E9AC96 /* WallapopMarvelTests */,
 				E1DACD712838D66A0046C281 /* Products */,
 				F4099DCDFB2BA1E94CCAA2DA /* Pods */,
 				D56B68D18B6810E8F0CE700D /* Frameworks */,
@@ -147,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				E1DACD702838D66A0046C281 /* WallapopMarvel.app */,
+				E1F0D068283D0CEB00E9AC96 /* WallapopMarvelUITests.xctest */,
+				E1F0D077283D0D1A00E9AC96 /* WallapopMarvelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,6 +398,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		E1F0D069283D0CEB00E9AC96 /* WallapopMarvelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1F0D06A283D0CEB00E9AC96 /* WallapopMarvelUITests.swift */,
+				E1F0D06C283D0CEB00E9AC96 /* WallapopMarvelUITestsLaunchTests.swift */,
+			);
+			path = WallapopMarvelUITests;
+			sourceTree = "<group>";
+		};
+		E1F0D078283D0D1A00E9AC96 /* WallapopMarvelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1F0D084283D0E6100E9AC96 /* HomeVCTests.swift */,
+			);
+			path = WallapopMarvelTests;
+			sourceTree = "<group>";
+		};
 		F4099DCDFB2BA1E94CCAA2DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +447,42 @@
 			productReference = E1DACD702838D66A0046C281 /* WallapopMarvel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E1F0D067283D0CEB00E9AC96 /* WallapopMarvelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1F0D072283D0CEC00E9AC96 /* Build configuration list for PBXNativeTarget "WallapopMarvelUITests" */;
+			buildPhases = (
+				E1F0D064283D0CEB00E9AC96 /* Sources */,
+				E1F0D065283D0CEB00E9AC96 /* Frameworks */,
+				E1F0D066283D0CEB00E9AC96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1F0D06F283D0CEC00E9AC96 /* PBXTargetDependency */,
+			);
+			name = WallapopMarvelUITests;
+			productName = WallapopMarvelUITests;
+			productReference = E1F0D068283D0CEB00E9AC96 /* WallapopMarvelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E1F0D076283D0D1A00E9AC96 /* WallapopMarvelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1F0D07D283D0D1A00E9AC96 /* Build configuration list for PBXNativeTarget "WallapopMarvelTests" */;
+			buildPhases = (
+				E1F0D073283D0D1A00E9AC96 /* Sources */,
+				E1F0D074283D0D1A00E9AC96 /* Frameworks */,
+				E1F0D075283D0D1A00E9AC96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1F0D07C283D0D1A00E9AC96 /* PBXTargetDependency */,
+			);
+			name = WallapopMarvelTests;
+			productName = WallapopMarvelTests;
+			productReference = E1F0D077283D0D1A00E9AC96 /* WallapopMarvelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -393,6 +495,14 @@
 				TargetAttributes = {
 					E1DACD6F2838D66A0046C281 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					E1F0D067283D0CEB00E9AC96 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = E1DACD6F2838D66A0046C281;
+					};
+					E1F0D076283D0D1A00E9AC96 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = E1DACD6F2838D66A0046C281;
 					};
 				};
 			};
@@ -410,6 +520,8 @@
 			projectRoot = "";
 			targets = (
 				E1DACD6F2838D66A0046C281 /* WallapopMarvel */,
+				E1F0D067283D0CEB00E9AC96 /* WallapopMarvelUITests */,
+				E1F0D076283D0D1A00E9AC96 /* WallapopMarvelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,6 +533,20 @@
 			files = (
 				E1DACD802838D66F0046C281 /* LaunchScreen.storyboard in Resources */,
 				E1DACD7D2838D66F0046C281 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0D066283D0CEB00E9AC96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0D075283D0D1A00E9AC96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +624,7 @@
 				E1DACDAD28390AA50046C281 /* OsLogs.swift in Sources */,
 				E1DACD8E2838E9370046C281 /* AppCoordinator.swift in Sources */,
 				E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */,
+				E19B13A5283CDA9900E52073 /* UIImageView+Extended.swift in Sources */,
 				E1DACD992838EA4E0046C281 /* Presentable.swift in Sources */,
 				E1DACD8A2838DA0D0046C281 /* HomeVC.swift in Sources */,
 				E1DACDA82838F6730046C281 /* AppDependencyContainer.swift in Sources */,
@@ -521,6 +648,7 @@
 				E1DACDAA2838F9930046C281 /* HomeDIContainer.swift in Sources */,
 				E1DACDB828390E170046C281 /* NetworkError.swift in Sources */,
 				E1DACDC828390FFD0046C281 /* NetworkRouter.swift in Sources */,
+				E19B13A3283CA6D800E52073 /* UIControlCombine+Extended.swift in Sources */,
 				E1DACDCF283911AD0046C281 /* HomeAPIResponseHandler.swift in Sources */,
 				E1DACDD1283911E70046C281 /* HomeEndpoint.swift in Sources */,
 				E1DACDC428390FC60046C281 /* HTTPMethod.swift in Sources */,
@@ -531,7 +659,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1F0D064283D0CEB00E9AC96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1F0D06B283D0CEB00E9AC96 /* WallapopMarvelUITests.swift in Sources */,
+				E1F0D06D283D0CEB00E9AC96 /* WallapopMarvelUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0D073283D0D1A00E9AC96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1F0D085283D0E6100E9AC96 /* HomeVCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1F0D06F283D0CEC00E9AC96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DACD6F2838D66A0046C281 /* WallapopMarvel */;
+			targetProxy = E1F0D06E283D0CEC00E9AC96 /* PBXContainerItemProxy */;
+		};
+		E1F0D07C283D0D1A00E9AC96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DACD6F2838D66A0046C281 /* WallapopMarvel */;
+			targetProxy = E1F0D07B283D0D1A00E9AC96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E1DACD7E2838D66F0046C281 /* LaunchScreen.storyboard */ = {
@@ -717,6 +875,76 @@
 			};
 			name = Release;
 		};
+		E1F0D070283D0CEC00E9AC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LKYJ9GPQ9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Timo.WallapopMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WallapopMarvel;
+			};
+			name = Debug;
+		};
+		E1F0D071283D0CEC00E9AC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LKYJ9GPQ9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Timo.WallapopMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WallapopMarvel;
+			};
+			name = Release;
+		};
+		E1F0D07E283D0D1A00E9AC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LKYJ9GPQ9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Timo.WallapopMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallapopMarvel.app/WallapopMarvel";
+			};
+			name = Debug;
+		};
+		E1F0D07F283D0D1A00E9AC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LKYJ9GPQ9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Timo.WallapopMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallapopMarvel.app/WallapopMarvel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -734,6 +962,24 @@
 			buildConfigurations = (
 				E1DACD852838D6700046C281 /* Debug */,
 				E1DACD862838D6700046C281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1F0D072283D0CEC00E9AC96 /* Build configuration list for PBXNativeTarget "WallapopMarvelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F0D070283D0CEC00E9AC96 /* Debug */,
+				E1F0D071283D0CEC00E9AC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1F0D07D283D0D1A00E9AC96 /* Build configuration list for PBXNativeTarget "WallapopMarvelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F0D07E283D0D1A00E9AC96 /* Debug */,
+				E1F0D07F283D0D1A00E9AC96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

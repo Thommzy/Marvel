@@ -9,33 +9,37 @@ import Foundation
 
 // MARK: - MarvelCharacter
 struct MarvelCharacter: Codable {
-    let code: Int?
-    let status, copyright, attributionText, attributionHTML: String?
-    let etag: String?
     let data: MarvelCharacterData?
 }
-
 // MARK: - MarvelCharacterData
 struct MarvelCharacterData: Codable {
-    let offset, limit, total, count: Int?
     let results: [MarvelCharacterDataResult]
 }
-
 // MARK: - MarvelCharacterDataResult
 struct MarvelCharacterDataResult: Codable {
-    let id: Int?
-    let name, resultDescription: String?
-    let modified: String?
+    let name: String
+    let resultDescription: String?
     let thumbnail: Thumbnail?
-    let resourceURI: String?
-
+    let comics, series: Comics?
+    let stories: Stories?
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case name
         case resultDescription = "description"
-        case modified, thumbnail, resourceURI
+        case thumbnail, comics, series, stories
     }
 }
-
+// MARK: - Comics
+struct Comics: Codable {
+    let available: Int?
+}
+// MARK: - ComicsItem
+struct ComicsItem: Codable {
+    let name: String?
+}
+// MARK: - Stories
+struct Stories: Codable {
+    let available: Int?
+}
 // MARK: - Thumbnail
 struct Thumbnail: Codable {
     let path: String?
@@ -46,20 +50,7 @@ struct Thumbnail: Codable {
         case thumbnailExtension = "extension"
     }
 }
-
 enum Extension: String, Codable {
-    case gif = "gif"
-    case jpg = "jpg"
-}
-
-// MARK: - URLElement
-struct URLElement: Codable {
-    let type: URLType?
-    let url: String?
-}
-
-enum URLType: String, Codable {
-    case comiclink = "comiclink"
-    case detail = "detail"
-    case wiki = "wiki"
+    case gif
+    case jpg
 }

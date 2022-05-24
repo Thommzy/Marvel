@@ -11,7 +11,7 @@ import Kingfisher
 
 class MarvelTableViewCell: UITableViewCell {
     private lazy var baseView = with(UIView()) {
-        $0.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 0.3426346552)
+        $0.backgroundColor = .systemGray
         $0.layer.cornerRadius = 10
     }
     private lazy var leftView = with(UIView()) {
@@ -35,10 +35,10 @@ class MarvelTableViewCell: UITableViewCell {
         $0.layer.masksToBounds = true
     }
     private lazy var nameLabel = with(UILabel()) {
-        $0.backgroundColor = .clear
+        $0.textColor = .label
     }
     private lazy var descriptionLabel = with(UILabel()) {
-        $0.backgroundColor = .clear
+        $0.textColor = .label
         $0.numberOfLines = 0
     }
     private lazy var seriesLabel = with(UILabel()) {
@@ -57,7 +57,7 @@ class MarvelTableViewCell: UITableViewCell {
         descriptionLabel.text = model.resultDescription
         guard let unwrappedPath = model.thumbnail?.path else { return }
         guard let unwrappedExtension = model.thumbnail?.thumbnailExtension?.rawValue else { return }
-        convertUrlToImage(path: unwrappedPath, imgVariant: "/portrait_xlarge.", extensions: unwrappedExtension)
+        imgView.convertUrlToImage(path: unwrappedPath, imgVariant: "/portrait_xlarge.", extensions: unwrappedExtension)
     }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -85,7 +85,6 @@ private extension MarvelTableViewCell {
     func setupBaseView() {
         contentView.addSubview(baseView)
         contentView.backgroundColor = .clear
-        //        selectionStyle = .none
         baseView.snp.makeConstraints { make in
             make.left.equalTo(contentView).offset(15)
             make.right.equalTo(contentView).offset(-15)
@@ -121,10 +120,5 @@ private extension MarvelTableViewCell {
             make.top.equalTo(rightView).offset(8)
             make.bottom.equalTo(rightView).offset(-8)
         }
-    }
-    func convertUrlToImage(path: String, imgVariant: String, extensions: String) {
-        let urlString = path + imgVariant + extensions
-        let url = URL(string: urlString)
-        imgView.kf.setImage(with: url)
     }
 }

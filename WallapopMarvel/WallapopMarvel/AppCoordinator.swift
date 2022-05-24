@@ -48,7 +48,7 @@ extension AppCoordinator {
 }
 
 extension AppCoordinator: HomeCoordinatorDelegate {
-    func didAuthorize() {
+    func didStartApp() {
         goToHomeScreen()
     }
 }

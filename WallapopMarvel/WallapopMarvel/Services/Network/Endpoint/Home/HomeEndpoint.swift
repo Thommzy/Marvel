@@ -49,8 +49,7 @@ extension HomeEndpoint {
     var headers: HTTPHeaders? {
         switch self {
         case .getMarvelList:
-            return [
-                    "Content-Type": "application/json"]
+            return ["Content-Type": "application/json"]
         }
     }
 }

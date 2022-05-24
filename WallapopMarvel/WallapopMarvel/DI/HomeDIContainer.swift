@@ -19,7 +19,7 @@ class HomeDIContainer {
                 HomeRepo(homeAPI: resolver.resolve(HomeRemoteAPI.self)!)
             }
             .inObjectScope(.container)
-            
+
             container.register(HomeVC.self) { resolver in
                 let homeVC = HomeVC()
                 homeVC.viewModel = resolver.resolve(HomeViewModelling.self)!
@@ -28,8 +28,8 @@ class HomeDIContainer {
             container.register(HomeViewModelling.self) { resolver in
                 return HomeViewModel(homeRepository: resolver.resolve(HomeRepository.self)!)
             }
-            
-            container.register(DetailVC.self) { resolver in
+
+            container.register(DetailVC.self) { _ in
                 let detailVC = DetailVC()
 //                homeVC.viewModel = resolver.resolve(HomeViewModelling.self)!
                 return detailVC

@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E1F0D067283D0CEB00E9AC96"
+               BuildableName = "WallapopMarvelUITests.xctest"
+               BlueprintName = "WallapopMarvelUITests"
+               ReferencedContainer = "container:WallapopMarvel.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E1F0D076283D0D1A00E9AC96"
+               BuildableName = "WallapopMarvelTests.xctest"
+               BlueprintName = "WallapopMarvelTests"
+               ReferencedContainer = "container:WallapopMarvel.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol BaseViewModelling {
-    var didTapAskATutor: PassthroughSubject<Void, Never> { get }
+    var triggerAPI: PassthroughSubject<Void, Never> { get }
     var sessionText: CurrentValueSubject<String, Never> { get }
     var networkError: PassthroughSubject<Void, Never> { get }
     var unauthorizedError: PassthroughSubject<Void, Never> { get }
@@ -18,7 +18,7 @@ protocol BaseViewModelling {
 }
 
 class BaseViewModel {
-    var didTapAskATutor = PassthroughSubject<Void, Never>()
+    var triggerAPI = PassthroughSubject<Void, Never>()
     var sessionText = CurrentValueSubject<String, Never>("")
     let networkError = PassthroughSubject<Void, Never>()
     let unauthorizedError = PassthroughSubject<Void, Never>()
@@ -26,4 +26,3 @@ class BaseViewModel {
     var subscriptions = Set<AnyCancellable>()
     var successResponse = PassthroughSubject<MarvelCharacter, Never>()
 }
-

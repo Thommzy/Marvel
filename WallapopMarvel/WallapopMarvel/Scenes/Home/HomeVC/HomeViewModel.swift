@@ -13,26 +13,33 @@ protocol HomeViewModelling: BaseViewModelling {
     var timeStamp: CurrentValueSubject<Int, Never> { get }
     var apiKey: CurrentValueSubject<String?, Never> { get }
     var hash: CurrentValueSubject<String, Never> { get }
-    var viewDidAppear: PassthroughSubject<Void, Never> { get }
+    var viewDidLoad: PassthroughSubject<Void, Never> { get }
     var numberOfRows: Int { get }
     func displayModelForCell(at indexPath: IndexPath) -> MarvelCharacterDataResult
+    var searchStr: CurrentValueSubject<String?, Never> { get }
     var dataSouceUpdated: PassthroughSubject<Void, Never> { get }
+    var didSelect: PassthroughSubject<IndexPath, Never> { get }
+    var onSelect: AnyPublisher<MarvelCharacterDataResult, Never> { get }
 }
 
 class HomeViewModel: BaseViewModel, HomeViewModelling {
     var timeStamp = CurrentValueSubject<Int, Never>(0)
     var apiKey = CurrentValueSubject<String?, Never>(nil)
     var hash = CurrentValueSubject<String, Never>("")
-    var viewDidAppear = PassthroughSubject<Void, Never>()
+    var viewDidLoad = PassthroughSubject<Void, Never>()
     var dataSouceUpdated = PassthroughSubject<Void, Never>()
+    let searchStr = CurrentValueSubject<String?, Never>(nil)
+    var didSelect = PassthroughSubject<IndexPath, Never>()
+    var onSelect: AnyPublisher<MarvelCharacterDataResult, Never> { _didSelect.eraseToAnyPublisher() }
+    private var _didSelect = PassthroughSubject<MarvelCharacterDataResult, Never>()
 
     // MARK: - Properties
     private let homeRepository: HomeRepository
+    private var backupDataSource = [MarvelCharacterDataResult]()
     private var dataSource = [MarvelCharacterDataResult]() {
         didSet { dataSouceUpdated.send() }
     }
     var numberOfRows: Int { dataSource.count }
-    
     // MARK: - Methods
 
     init(homeRepository: HomeRepository) {
@@ -40,44 +47,55 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
         super.init()
         bindOutput()
     }
-    
     func displayModelForCell(at indexPath: IndexPath) -> MarvelCharacterDataResult {
         return dataSource[indexPath.row]
     }
 
     private func bindOutput() {
-        viewDidAppear
+        viewDidLoad
             .sink { [weak self] in
-                self?.didTapAskATutor.send()
+                self?.triggerAPI.send()
             }
             .store(in: &subscriptions)
-
         getMarvelList()
             .sink { networkError in
                 print(networkError)
             } receiveValue: { [unowned self] res in
-                print(res.data?.results.count, "mama-->>")
                 guard let results = res.data?.results else { return  }
+                backupDataSource = results
                 dataSource = results
-                self.successResponse.send(res)
             }
+            .store(in: &subscriptions)
+        searchStr
+            .compactMap { $0 }
+            .sink { [weak self] searchStr in
+                self?.searchString(searchText: searchStr)
+            }
+            .store(in: &subscriptions)
+        didSelect.map { [unowned self] in self.dataSource[$0.row] }
+            .assign(to: _didSelect)
             .store(in: &subscriptions)
     }
 
     private func getMarvelList() -> AnyPublisher<MarvelCharacter, NetworkError> {
         let homeRepository = homeRepository
-        return didTapAskATutor.withLatestFrom(timeStamp,
-                                              apiKey.compactMap {$0},
-                                              hash) {
+        return triggerAPI.withLatestFrom(timeStamp,
+                                         apiKey.compactMap {$0},
+                                         hash) {
             $1
         }
-        .setFailureType(to: NetworkError.self)
-        .flatMap { output in
-            return homeRepository.marvelList(with: output.0,
-                                             apiKey: output.1,
-                                             hash: output.2,
-                                             limit: 50)
-        }
-        .eraseToAnyPublisher()
+                                         .setFailureType(to: NetworkError.self)
+                                         .flatMap { output in
+                                             return homeRepository.marvelList(with: output.0,
+                                                                              apiKey: output.1,
+                                                                              hash: output.2,
+                                                                              limit: 50)
+                                         }
+                                         .eraseToAnyPublisher()
+    }
+    private func searchString(searchText: String) {
+        dataSource = searchText.isEmpty ?
+        backupDataSource : backupDataSource.filter { $0.name.range(of: searchText, options: .caseInsensitive) != nil }
+        debugPrint("dataSource", dataSource)
     }
 }
