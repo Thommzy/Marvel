@@ -39,6 +39,9 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
     private var dataSource = [MarvelCharacterDataResult]() {
         didSet { dataSouceUpdated.send() }
     }
+
+    private let userDefaults = UserDefaults.standard
+
     var numberOfRows: Int { dataSource.count }
     // MARK: - Methods
 
@@ -57,13 +60,15 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
                 self?.triggerAPI.send()
             }
             .store(in: &subscriptions)
+        getSavedData()
         getMarvelList()
             .sink { networkError in
                 print(networkError)
             } receiveValue: { [unowned self] res in
                 guard let results = res.data?.results else { return  }
-                backupDataSource = results
                 dataSource = results
+                backupDataSource = results
+                setDataToStorage(result: results)
             }
             .store(in: &subscriptions)
         searchStr
@@ -75,6 +80,23 @@ class HomeViewModel: BaseViewModel, HomeViewModelling {
         didSelect.map { [unowned self] in self.dataSource[$0.row] }
             .assign(to: _didSelect)
             .store(in: &subscriptions)
+    }
+    private func setDataToStorage(result: [MarvelCharacterDataResult]) {
+        do {
+            try self.userDefaults.setObject(result, forKey: "marvelList")
+        } catch {
+            print(error.localizedDescription, "Error")
+        }
+    }
+    private func getSavedData() {
+        do {
+            let marvelList = try userDefaults.getObject(forKey: "marvelList",
+                                                        castTo: [MarvelCharacterDataResult].self)
+            dataSource = marvelList
+            backupDataSource = marvelList
+        } catch {
+            print(error.localizedDescription, "Error")
+        }
     }
 
     private func getMarvelList() -> AnyPublisher<MarvelCharacter, NetworkError> {

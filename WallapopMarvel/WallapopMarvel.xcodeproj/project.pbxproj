@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7530DCA5186A1BE3E19CCB5D /* Pods_WallapopMarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */; };
+		E18C1558283F9ED20028374F /* UserDefaults+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C1557283F9ED20028374F /* UserDefaults+Extended.swift */; };
 		E19B1399283C08A000E52073 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B1398283C08A000E52073 /* With.swift */; };
 		E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */; };
 		E19B139E283C114B00E52073 /* UITableViewCell+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */; };
@@ -75,6 +76,7 @@
 		49DEF5AD2A5D38B459FFA2B9 /* Pods-WallapopMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.release.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.release.xcconfig"; sourceTree = "<group>"; };
 		69413953A286B720C20C2FC0 /* Pods_WallapopMarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallapopMarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51C68B895488F38EFABF0BE /* Pods-WallapopMarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallapopMarvel.debug.xcconfig"; path = "Target Support Files/Pods-WallapopMarvel/Pods-WallapopMarvel.debug.xcconfig"; sourceTree = "<group>"; };
+		E18C1557283F9ED20028374F /* UserDefaults+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extended.swift"; sourceTree = "<group>"; };
 		E19B1398283C08A000E52073 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		E19B139B283C0FC100E52073 /* MarvelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTableViewCell.swift; sourceTree = "<group>"; };
 		E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extended.swift"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				E19B139D283C114B00E52073 /* UITableViewCell+Extended.swift */,
 				E19B13A2283CA6D700E52073 /* UIControlCombine+Extended.swift */,
 				E19B13A4283CDA9900E52073 /* UIImageView+Extended.swift */,
+				E18C1557283F9ED20028374F /* UserDefaults+Extended.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				E19B139C283C0FC100E52073 /* MarvelTableViewCell.swift in Sources */,
 				E19B13A5283CDA9900E52073 /* UIImageView+Extended.swift in Sources */,
 				E1DACD992838EA4E0046C281 /* Presentable.swift in Sources */,
+				E18C1558283F9ED20028374F /* UserDefaults+Extended.swift in Sources */,
 				E1DACD8A2838DA0D0046C281 /* HomeVC.swift in Sources */,
 				E1DACDA82838F6730046C281 /* AppDependencyContainer.swift in Sources */,
 				E1DACD922838E9A40046C281 /* Router.swift in Sources */,
